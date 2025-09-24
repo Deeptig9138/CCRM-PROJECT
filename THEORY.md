@@ -87,3 +87,73 @@ Source Code (.java) → Compiler → Bytecode (.class) → JVM → Machine Code
 Run project: Run → Run Configurations → Select Main Class → Run.
 
 --- 
+
+## **6. Errors vs Exceptions**
+| **Errors** |	**Exceptions** | 
+|------------|----------------|
+| Critical problems, not recoverable. | Issues that can be handled gracefully. |
+| Caused by system-level failures. | Caused by incorrect user input or logic. |
+| Example: OutOfMemoryError |	Example: NullPointerException, IOException. |
+
+***In our project:***
+- Errors: Handled by JVM, not part of the code.
+- Exceptions: DuplicateEnrollmentException & MaxCreditLimitExceededException
+
+---
+
+## **7. Assertions in Java**
+Assertions verify assumptions made by the program.
+
+Syntax:
+```bash
+assert condition : "Error message if false";
+```
+Enabling Assertions:
+```bash
+java -ea Main
+```
+Example:
+```bash
+assert student != null : "Student cannot be null";
+```
+
+---
+
+## **8. Interfaces vs Abstract Classes**
+| **Aspect** | **Interface** | **Abstract Class** |
+|------------|---------------|--------------------|
+| Multiple inheritance	| ✅ Yes	| ❌ No |
+| Contains variables	| Only `public static final`	| Instance + static variables |
+| Use case	| Define capabilities (e.g., Searchable)	| Share common behavior (e.g., Person) | 
+| Example in project	| `Searchable` | `Person` | 
+
+---
+
+## **9. Mapping Table – Syllabus Topics to Code**
+| **Topic** | **File/Class/Method** |
+|-----------|-----------------------|
+| Encapsulation | `Student.java`, private fields + getters/setters |
+| Inheritance	| `Person.java → Student.java, Instructor.java` |
+| Abstraction	| `Person.java` (abstract methods) |
+| Polymorphism	| `TranscriptService.java` |
+| Interfaces	| `Searchable.java`, `Persistable.java` |
+| Nested Classes	| `Course.java` (static nested class `Builder`) |
+| Enums	| `Semester.java`, `Grade.java` |
+| Custom Exceptions	| `DuplicateEnrollmentException.java`, `MaxCreditLimitExceededException.java` |
+| Singleton	| `AppConfig.java` |
+| Builder Pattern	| `Course.Builder` |
+| Stream API	| `ReportsService.java` |
+| Recursion	| `RecursionUtil.java` |
+| File I/O (NIO.2)	| `CSVImporter.java`, `CSVExporter.java`, `BackupService.java` |
+
+---
+
+## **10. Acknowledgements**
+This project was developed as part of the Java SE coursework.
+
+References used:
+- Oracle Java Documentation
+- Baeldung Java Guides
+- Classroom materials and personal notes.
+
+---
