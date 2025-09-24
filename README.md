@@ -138,6 +138,23 @@ assert course.getCredits() > 0 : "Credits must be positive";
 **THEORY.md:**
 All theoretical answers are included in THEORY.md.
 
+**🗺️ Mapping Table (Quick View)**
+| **Topic** | **File/Class/Method** |
+|-----------|-----------------------|
+| Encapsulation | `Student.java`, private fields + getters/setters |
+| Inheritance	| `Person.java → Student.java, Instructor.java` |
+| Abstraction	| `Person.java` (abstract methods) |
+| Polymorphism	| `TranscriptService.java` |
+| Interfaces	| `Searchable.java`, `Persistable.java` |
+| Nested Classes	| `Course.java` (static nested class `Builder`) |
+| Enums	| `Semester.java`, `Grade.java` |
+| Custom Exceptions	| `DuplicateEnrollmentException.java`, `MaxCreditLimitExceededException.java` |
+| Singleton	| `AppConfig.java` |
+| Builder Pattern	| `Course.Builder` |
+| Stream API	| `ReportsService.java` |
+| Recursion	| `RecursionUtil.java` |
+| File I/O (NIO.2)	| `CSVImporter.java`, `CSVExporter.java`, `BackupService.java` |
+
 ---
 ## 🤝 Acknowledgements
 - Oracle Java Documentation – https://docs.oracle.com/
